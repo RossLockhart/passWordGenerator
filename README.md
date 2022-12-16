@@ -1,2 +1,0 @@
-# passWordGenerator
-React and Typescript 
