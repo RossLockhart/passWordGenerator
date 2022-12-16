@@ -1,0 +1,12 @@
+.styledButton{ 
+transition-duration: 0.5s;
+background-color: green;
+border-radius: 8px;
+font-size: 18px;
+}
+.styledButton:hover{
+    background-color: red;
+   color:black;
+   font-size: 24px;
+
+}
