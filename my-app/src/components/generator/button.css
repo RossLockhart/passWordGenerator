@@ -6,7 +6,12 @@ font-size: 18px;
 }
 .styledButton:hover{
     background-color: red;
-   color:black;
+   color:rgb(0, 0, 0);
    font-size: 24px;
 
+}
+
+p{
+    color: white;
+    font-size: 24px;
 }

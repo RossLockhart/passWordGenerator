@@ -1,7 +1,7 @@
 import './generator.css';
 import Button from './Button';
 
-function Header() {
+function GeneratorFunction() {
   return (
     <>
     <div className="generator">
@@ -12,4 +12,4 @@ function Header() {
       </>
       );
 }
-export default Header;
+export default GeneratorFunction;
