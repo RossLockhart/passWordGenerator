@@ -32,7 +32,7 @@ const Button = (props:any) => {
 
 return (
     <div> 
-<button className="styledButton" onClick={()=>{stringGenerator(20); saveOldPassword(oldPassword)}}>Click here for passsword &#x1F510;</button>
+<button className="styledButton" onClick={()=>{stringGenerator(20); saveOldPassword(oldPassword)}}>Click here for password &#x1F510;</button>
 <h2>New Password:</h2>
 <p className="newPassword">{password}</p>
 
