@@ -6,12 +6,33 @@ font-size: 18px;
 }
 .styledButton:hover{
     background-color: red;
-   color:rgb(0, 0, 0);
-   font-size: 24px;
-
+    color:rgb(0, 0, 0);
+    font-size: 24px;
+    
+}
+h2{
+     background-color: green;
+    width: 30%; 
+   text-align: center;
+   position: relative;
+   left: 35%;
+   border-radius: 8px;
 }
 
-p{
-    color: white;
+.newPassword{
+    color: rgb(51, 255, 0);
+    font-size: 24px;
+}
+
+.lastPassword{
+    color: rgb(255, 98, 0);
+    font-size: 24px;
+}
+
+
+li{
+    display: block;
+    list-style-type: none; 
+    color: rgb(255, 0, 0);
     font-size: 24px;
 }
