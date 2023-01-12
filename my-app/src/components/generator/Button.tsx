@@ -1,6 +1,23 @@
 // import RandomString from "./RandomString"
 import "./button.css"
+// import CopyComponent from "./copyTextButton";
 import { useState } from "react";
+
+//this is the real page but at the moment this is a being spiked in for the copy functionality- real code is in safteyCopy
+
+    function copyPassword() {
+      // Get the text field
+      let copyText = document.getElementById("newPassword") as HTMLInputElement;
+    
+      // Select the text field
+      copyText.select();
+    
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value);
+      
+      // Alert the copied text
+      alert("Copied the text: " + copyText.value);
+    }
 
 
 const Button = (props:any) => {
@@ -8,7 +25,7 @@ const Button = (props:any) => {
     
     const [oldPassword, setOldPassword] = useState<String[]>([]);
 
-    const [password, setPassword] = useState("")
+    const [password, setPassword] = useState<String>("")
     
     function stringGenerator(length:number=20) {
         let result:string = ' ';
@@ -34,7 +51,8 @@ return (
     <div> 
 <button className="styledButton" onClick={()=>{stringGenerator(20); saveOldPassword(oldPassword)}}>Click here for password &#x1F510;</button>
 <h2>New Password:</h2>
-<p className="newPassword">{password}</p>
+<p className="newPassword" id='newPassword'>{password} <button onClick={()=>{copyPassword()}}>Copy text</button></p>
+
 
 <h2>Last Password:</h2>
 <p className="lastPassword">{oldPassword[0]}</p>
@@ -51,3 +69,18 @@ export default Button
 
 
 // https://www.youtube.com/watch?v=ebWNqQTI6ZY 
+
+
+
+
+
+//this is the old way that didn't work that well e.g would split the password and create an array from the characters
+
+// function saveOldPassword(oldPassword: any){
+//     setOldPassword(oldPassword)
+//        const copy = [...oldPassword];
+//        copy.push({ id: oldPassword.length, text: oldPassword });
+//        console.log(444, oldPassword)
+//        console.log(555, copy.join())
+//        return copy.join();
+//     }

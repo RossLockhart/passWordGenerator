@@ -2,8 +2,7 @@
 import "./button.css"
 import { useState } from "react";
 
-
-//THIS PAGE IS A REPLICA OF THE ORIGINAL BUTTON PAGE
+//THIS FIILE IS THE REAL ORIGINAL OF THE BUTTON BEFORE YOU STARTED TO BUILD THE COPY TEXT FUNCTIONALITY 
 const Button = (props:any) => {
     const characters: string ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!£$%&#';
     
@@ -35,8 +34,7 @@ return (
     <div> 
 <button className="styledButton" onClick={()=>{stringGenerator(20); saveOldPassword(oldPassword)}}>Click here for password &#x1F510;</button>
 <h2>New Password:</h2>
-<p className="newPassword" id='newPassword'>{password}</p>
-<button onClick={()=>{}}>Copy text</button>
+<p className="newPassword">{password}</p>
 
 <h2>Last Password:</h2>
 <p className="lastPassword">{oldPassword[0]}</p>
