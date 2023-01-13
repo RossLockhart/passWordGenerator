@@ -33,10 +33,8 @@ const Button = (props:any) => {
         for ( let i = 0; i < length; i++ ) {
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
-      
     setPassword(result) 
     // console.log(111,password)//this is the log that is actually working. not sure how it's hoisting the function invokation below (i know it is because if i set the string length to 20 there, the length of the first console log changes)
-   
     }
 
     function saveOldPassword(oldPassword: any){
@@ -51,7 +49,7 @@ return (
     <div> 
 <button className="styledButton" onClick={()=>{stringGenerator(20); saveOldPassword(oldPassword)}}>Click here for password &#x1F510;</button>
 <h2>New Password:</h2>
-<p className="newPassword" id='newPassword'>{password} <button onClick={()=>{copyPassword()}}>Copy text</button></p>
+<p className="newPassword" id='newPassword'>{password} <button onClick={(password)=>{copyPassword()}}>Copy password</button></p>
 
 
 <h2>Last Password:</h2>
