@@ -3,7 +3,7 @@ import "./button.css"
 import { useState } from "react";
 
 //THIS FIILE IS THE REAL ORIGINAL OF THE BUTTON BEFORE YOU STARTED TO BUILD THE COPY TEXT FUNCTIONALITY 
-const Button = (props:any) => {
+const SafteyButton = (props:any) => {
     const characters: string ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!£$%&#';
     
     const [oldPassword, setOldPassword] = useState<String[]>([]);
@@ -47,7 +47,7 @@ return (
 )
 
 }
-export default Button 
+export default SafteyButton 
 
 
 // https://www.youtube.com/watch?v=ebWNqQTI6ZY 

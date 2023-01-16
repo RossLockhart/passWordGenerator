@@ -1,5 +1,9 @@
 import './generator.css';
 import Button from './Button';
+// import SafteyButton from './safteryCopy';
+
+import ButtonRemake from './ButtonRemake';
+
 
 function GeneratorFunction() {
   return (

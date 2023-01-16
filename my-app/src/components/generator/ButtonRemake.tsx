@@ -1,10 +1,10 @@
 // import RandomString from "./RandomString"
 import "./button.css"
 import { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
-
-//THIS PAGE IS A REPLICA OF THE ORIGINAL BUTTON PAGE
-const Button = (props:any) => {
+//THIS FIILE IS THE REAL ORIGINAL OF THE BUTTON BEFORE YOU STARTED TO BUILD THE COPY TEXT FUNCTIONALITY 
+const ButtonRemake = (props:any) => {
     const characters: string ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!£$%&#';
     
     const [oldPassword, setOldPassword] = useState<String[]>([]);
@@ -33,10 +33,23 @@ const Button = (props:any) => {
 
 return (
     <div> 
-<button className="styledButton" onClick={()=>{stringGenerator(20); saveOldPassword(oldPassword)}}>Click here for password &#x1F510;</button>
+<button className="styledButton" onClick={()=>{
+    stringGenerator(20); 
+    saveOldPassword(oldPassword)}}
+    >
+        Click here for password &#x1F510;
+        </button>
 <h2>New Password:</h2>
-<p className="newPassword" id='newPassword'>{password}</p>
-<button onClick={()=>{}}>Copy text</button>
+
+<CopyToClipboard
+      
+      text={(document.getElementById("newPassword") as HTMLInputElement).textContent!}
+        >
+          <button>Copy to clipboard with button</button>
+      </CopyToClipboard>
+
+<p className="newPassword">{password}</p>
+
 
 <h2>Last Password:</h2>
 <p className="lastPassword">{oldPassword[0]}</p>
@@ -49,7 +62,7 @@ return (
 )
 
 }
-export default Button 
+export default ButtonRemake 
 
 
 // https://www.youtube.com/watch?v=ebWNqQTI6ZY 
